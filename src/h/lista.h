@@ -4,14 +4,14 @@
 typedef struct lista Lista;
 
 
-Lista* iniciaLista();
+Lista* inicia_lista();
 
-void insereNaLista(Lista* lista, Matriz* matriz);
+void insere_na_lista(Lista* lista, char* string);
 
-void retiraNaLista(Lista* lista, int posicao);
+void retira_na_lista(Lista* lista, int posicao);
 
-void imprimeLista(Lista* lista);
+void imprime_lista(Lista* lista);
 
-void destroiLista(Lista* lista);
+void destroi_lista(Lista* lista);
 
 #endif

@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "./src/h/vetor.h"
+#include "./src/h/grafo.h"
 
 char* append(char* diretorio, const char* sufixo);
 
@@ -32,7 +33,10 @@ int main(int argc, char** argv) {
     Vetor* vetorStopwords = vetor_strings(fs);
     imprime_vetor(vetorStopwords);
 
+    Grafo** g = le_grafo(fg, vetorIndex->tam);
+    // imprime_grafo(g, vetorIndex->tam);
 
+    // libera_grafo(g, vetorIndex->tam);
     destroi_vetor(vetorIndex);
     destroi_vetor(vetorStopwords);
 
