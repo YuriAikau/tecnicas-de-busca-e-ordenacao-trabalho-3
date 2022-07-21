@@ -4,15 +4,17 @@
 
 #include "./src/h/vetor.h"
 #include "./src/h/grafo.h"
+#include "./src/h/indexador.h"
 
-char* append(char* diretorio, const char* sufixo);
+char* append_diretorio(char* diretorio, const char* sufixo);
 
 int main(int argc, char** argv) {
     char* dir = argv[1];
 
-    char* index = append(dir, "index.txt");
-    char* stopwords = append(dir, "stopwords.txt");
-    char* graph = append(dir, "graph.txt");
+    char* index = append_diretorio(dir, "index.txt");
+    char* stopwords = append_diretorio(dir, "stopwords.txt");
+    char* graph = append_diretorio(dir, "graph.txt");
+    char* pages = append_diretorio(dir, "pages");
 
     // printf("%s\n", index);
     // printf("%s\n", stopwords);
@@ -34,9 +36,16 @@ int main(int argc, char** argv) {
     imprime_vetor(vetorStopwords);
 
     Grafo** g = le_grafo(fg, vetorIndex->tam);
-    // imprime_grafo(g, vetorIndex->tam);
+    imprime_grafo(g, vetorIndex->tam);
 
-    // libera_grafo(g, vetorIndex->tam);
+    RBT* h = RBT_init();
+    h = RBT_insere(h, vetorIndex->v[0], vetorIndex->v[1]);
+    h = RBT_insere(h, vetorIndex->v[0], vetorIndex->v[4]);
+    h = RBT_insere(h, vetorIndex->v[2], vetorIndex->v[3]);
+    RBT_imprime(h);
+
+
+    libera_grafo(g, vetorIndex->tam);
     destroi_vetor(vetorIndex);
     destroi_vetor(vetorStopwords);
 
@@ -51,7 +60,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-char* append(char* diretorio, const char* sufixo){
+char* append_diretorio(char* diretorio, const char* sufixo){
     size_t necessario = snprintf(NULL, 0, "%s/%s", diretorio, sufixo);
     char* apnd = (char*) malloc(necessario+1);
     sprintf(apnd, "%s/%s", diretorio, sufixo);

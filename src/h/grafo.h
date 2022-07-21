@@ -12,6 +12,7 @@ typedef struct grafo_t {
     Lista* adjacencias;
 } Grafo;
 
+Grafo* init_grafo();
 Grafo** le_grafo(FILE* fg, int tam);
 void imprime_grafo(Grafo** g, int tam);
 void libera_grafo(Grafo** g, int tam);

@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/mateus/Desktop/Faculdade/Quinto_Periodo/Tecnicas_de_Busca_e_Ordenacao/Trabalho_III'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/home/mateus/Desktop/Faculdade/Quinto_Periodo/Tecnicas_de_Busca_e_Ordenacao/Trabalho_III'
+ 
