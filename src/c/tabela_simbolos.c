@@ -61,7 +61,7 @@ void troca_cores(RBT *h) {
 RBT* cria_no(Key chave, char* val, bool cor){
     RBT* no = (RBT*)malloc(sizeof(RBT));
 
-    no->chave = chave;
+    no->chave = strdup(chave);
     no->val = inicia_lista(); insere_na_lista(no->val, val);
     no->cor = cor;
     no->e = NULL; no->d = NULL;
@@ -102,4 +102,26 @@ static void rec_imprime(RBT* h, int level) {
 
 void RBT_imprime(RBT* h) {
     rec_imprime(h, 0);
+}
+
+static void libera_no(RBT* no) {
+    free(no->chave);
+    destroi_lista(no->val);
+    free(no);
+}
+
+void RBT_libera(RBT* h) {
+    if(!h)
+        return;
+    
+    if(!h->e && !h->d) {
+        free(h->chave);
+        destroi_lista(h->val);
+        free(h);
+        return;
+    }
+
+    RBT_libera(h->e);
+    RBT_libera(h->d);
+    free(h);
 }

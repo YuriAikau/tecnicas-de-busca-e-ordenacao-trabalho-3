@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 20 19:31:04 2022
+# Make data base, printed on Fri Jul 22 05:59:08 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:56537
+JOURNAL_STREAM = 8:55471
 # makefile (from 'Makefile', line 4)
 CFLAGS = -c
 # environment
@@ -75,11 +75,11 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=ead4889da721f48fd4d824cc62d87de6
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=e1226abcff989cf5394cb48362da668d
 # environment
 LC_CTYPE = pt_BR.UTF-8
 # environment
-MANAGERPID = 1254
+MANAGERPID = 1251
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -95,7 +95,7 @@ PATH = /home/mateus/bin:/home/mateus/.local/bin:/home/mateus/bin:/usr/local/sbin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/pc:@/tmp/.ICE-unix/1685,unix/pc:/tmp/.ICE-unix/1685
+SESSION_MANAGER = local/pc:@/tmp/.ICE-unix/1674,unix/pc:/tmp/.ICE-unix/1674
 # makefile (from 'Makefile', line 1)
 NOME_PROJETO = trab3
 # environment
@@ -115,7 +115,7 @@ ELECTRON_RUN_AS_NODE = 1
 # makefile (from 'Makefile', line 7)
 C_SOURCE = cliente.c $(wildcard ./src/c/*.c)
 # environment
-INVOCATION_ID = 5f7697ca05e9449c9034fd2103f917b0
+INVOCATION_ID = 5c1707b4bfd447e4934a53b7941a3175
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -137,7 +137,7 @@ PWD = /home/mateus/Desktop/Faculdade/Quinto_Periodo/Tecnicas_de_Busca_e_Ordenaca
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1571
+SSH_AGENT_PID = 1593
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -155,7 +155,7 @@ VSCODE_CODE_CACHE_PATH = /home/mateus/.config/Code/CachedData/3b889b090b5ad5793f
 # environment
 LOGNAME = mateus
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
@@ -253,11 +253,11 @@ LC_ALL = C
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/18aa9250_f851_4470_907b_b139a6ebe32a
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/2c6c4a91_86eb_485c_8fe4_114ca526f25c
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.116
+GNOME_TERMINAL_SERVICE = :1.98
 # default
 SUFFIXES := 
 # environment
@@ -279,9 +279,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 8288
+VSCODE_PID = 4381
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ead4889da721f48fd4d824cc62d87de6
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=e1226abcff989cf5394cb48362da668d
 # variable set hash-table stats:
 # Load=136/1024=13%, Rehash=0, Collisions=24/166=14%
 
@@ -291,13 +291,13 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ead4889da721f48fd4d824c
 
 # Directories
 
-# . (device 2053, inode 1919293): 11 files, no impossibilities.
+# . (device 2053, inode 1919293): 12 files, no impossibilities.
+# src/c (device 2053, inode 1919296): 12 files, 5 impossibilities.
+# ./src/h (device 2053, inode 1919295): 7 files, no impossibilities.
  
-# src/c (device 2053, inode 1919296): 8 files, 3 impossibilities.
-# ./src/h (device 2053, inode 1919295): 5 files, no impossibilities.
-# ./src/c (device 2053, inode 1919296): 8 files, 3 impossibilities.
+# ./src/c (device 2053, inode 1919296): 12 files, 5 impossibilities.
 
-# 32 files, 6 impossibilities in 4 directories.
+# 43 files, 10 impossibilities in 4 directories.
 
 # Implicit Rules
 
@@ -312,7 +312,7 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ead4889da721f48fd4d824c
 # Not a target:
 cliente.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 22:00:52.992222652
+#  Last modified 2022-07-21 21:28:27.479334719
 #  File has been updated.
 #  Successfully updated.
 
@@ -326,7 +326,7 @@ all: trab3
 # Not a target:
 src/h/grafo.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 21:59:24.62984974
+#  Last modified 2022-07-20 19:37:38.876814721
 #  File has been updated.
 #  Successfully updated.
 
@@ -347,21 +347,35 @@ src/h/vetor.h:
 # Not a target:
 src/c/grafo.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 22:00:28.004674575
+#  Last modified 2022-07-21 21:31:49.377037993
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/c/vetor.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 21:40:11.430377705
+#  Last modified 2022-07-21 21:31:49.329039397
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/h/indexador.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-21 20:07:18.143034628
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/h/lista.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 21:53:38.009268302
+#  Last modified 2022-07-20 20:24:13.244687681
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/c/indexador.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-21 22:12:33.058295984
 #  File has been updated.
 #  Successfully updated.
 
@@ -374,7 +388,7 @@ src/h/lista.h:
 # Not a target:
 src/c/lista.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 21:58:31.786864459
+#  Last modified 2022-07-21 21:31:49.289040566
 #  File has been updated.
 #  Successfully updated.
 
@@ -392,36 +406,50 @@ clean:
 #  recipe to execute (from 'Makefile', line 30):
 	rm -rf ./cliente.o ./src/c/*.o $(NOME_PROJETO)
 
-cliente.o: cliente.c src/h/lista.h src/h/vetor.h src/h/grafo.h
+cliente.o: cliente.c src/h/lista.h src/h/vetor.h src/h/grafo.h src/h/tabela_simbolos.h src/h/indexador.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-19 22:00:55.480177989
+#  Last modified 2022-07-21 21:31:49.129045244
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 24):
 	@ $(CC) $(CFLAGS) $<
 
-trab3: cliente.o src/c/lista.o src/c/vetor.o src/c/grafo.o
+# Not a target:
+src/h/tabela_simbolos.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-21 20:31:28.488373674
+#  File has been updated.
+#  Successfully updated.
+
+trab3: cliente.o src/c/tabela_simbolos.o src/c/indexador.o src/c/lista.o src/c/vetor.o src/c/grafo.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-19 22:00:55.508177486
+#  Last modified 2022-07-21 22:12:33.086295404
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 18):
 	@ $(CC) -o $@ $^
 
+# Not a target:
+src/c/tabela_simbolos.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-21 21:53:30.614152435
+#  File has been updated.
+#  Successfully updated.
+
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=1/49=2%
+# Load=19/1024=2%, Rehash=0, Collisions=1/65=2%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 45 / storage = 414 B / avg = 9 B
-# current buf: size = 8162 B / used = 414 B / count = 45 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 60 / storage = 681 B / avg = 11 B
+# current buf: size = 8162 B / used = 681 B / count = 60 / avg = 11 B
 
-# strcache performance: lookups = 73 / hit rate = 38%
+# strcache performance: lookups = 94 / hit rate = 36%
 # hash-table stats:
-# Load=45/8192=1%, Rehash=0, Collisions=3/73=4%
-# Finished Make data base on Wed Jul 20 19:31:04 2022
+# Load=60/8192=1%, Rehash=0, Collisions=3/94=3%
+# Finished Make data base on Fri Jul 22 05:59:08 2022
 
  

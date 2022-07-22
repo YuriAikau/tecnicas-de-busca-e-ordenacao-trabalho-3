@@ -31,5 +31,6 @@ RBT* RBT_init();
 Value busca(RBT *n, Key key);
 RBT* RBT_insere(RBT *h, Key key, char* val);
 void RBT_imprime(RBT* h);
+void RBT_libera(RBT* h);
 
 #endif

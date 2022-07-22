@@ -6,8 +6,6 @@
 #include "./src/h/grafo.h"
 #include "./src/h/indexador.h"
 
-char* append_diretorio(char* diretorio, const char* sufixo);
-
 int main(int argc, char** argv) {
     char* dir = argv[1];
 
@@ -30,21 +28,18 @@ int main(int argc, char** argv) {
     }
 
     Vetor* vetorIndex = vetor_strings(fi);
-    imprime_vetor(vetorIndex);
+    // imprime_vetor(vetorIndex);
 
     Vetor* vetorStopwords = vetor_strings(fs);
-    imprime_vetor(vetorStopwords);
+    //imprime_vetor(vetorStopwords);
 
     Grafo** g = le_grafo(fg, vetorIndex->tam);
-    imprime_grafo(g, vetorIndex->tam);
+    //imprime_grafo(g, vetorIndex->tam);
 
-    RBT* h = RBT_init();
-    h = RBT_insere(h, vetorIndex->v[0], vetorIndex->v[1]);
-    h = RBT_insere(h, vetorIndex->v[0], vetorIndex->v[4]);
-    h = RBT_insere(h, vetorIndex->v[2], vetorIndex->v[3]);
-    RBT_imprime(h);
+    RBT* tab_sim = indexador(vetorIndex, pages);
 
 
+    RBT_libera(tab_sim);
     libera_grafo(g, vetorIndex->tam);
     destroi_vetor(vetorIndex);
     destroi_vetor(vetorStopwords);
@@ -56,15 +51,7 @@ int main(int argc, char** argv) {
     free(index);
     free(stopwords);
     free(graph);
+    free(pages);
 
     return 0;
 }
-
-char* append_diretorio(char* diretorio, const char* sufixo){
-    size_t necessario = snprintf(NULL, 0, "%s/%s", diretorio, sufixo);
-    char* apnd = (char*) malloc(necessario+1);
-    sprintf(apnd, "%s/%s", diretorio, sufixo);
-
-    return apnd;
-}
-
