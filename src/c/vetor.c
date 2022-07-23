@@ -25,7 +25,7 @@ void imprime_vetor(Vetor* vetor) {
     printf("====================================\n");
     printf("O tamanho do vetor eh: %d\n", vetor->tam);
     for(int i = 0; i < vetor->tam; i++)
-        printf("%s\n", vetor->v[i]);
+        printf("%d: %s\n", i, vetor->v[i]);
     printf("====================================\n");
 }
 

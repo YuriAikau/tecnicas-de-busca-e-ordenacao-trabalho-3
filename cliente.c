@@ -31,13 +31,13 @@ int main(int argc, char** argv) {
     // imprime_vetor(vetorIndex);
 
     Vetor* vetorStopwords = vetor_strings(fs);
-    //imprime_vetor(vetorStopwords);
+    // imprime_vetor(vetorStopwords);
 
     Grafo** g = le_grafo(fg, vetorIndex->tam);
     //imprime_grafo(g, vetorIndex->tam);
 
-    RBT* tab_sim = indexador(vetorIndex, pages);
-
+    RBT* tab_sim = indexador(vetorIndex, vetorStopwords, pages);
+    RBT_imprime(tab_sim);
 
     RBT_libera(tab_sim);
     libera_grafo(g, vetorIndex->tam);

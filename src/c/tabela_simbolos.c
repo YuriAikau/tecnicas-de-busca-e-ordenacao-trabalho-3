@@ -123,5 +123,8 @@ void RBT_libera(RBT* h) {
 
     RBT_libera(h->e);
     RBT_libera(h->d);
+
+    free(h->chave);
+    destroi_lista(h->val);
     free(h);
 }

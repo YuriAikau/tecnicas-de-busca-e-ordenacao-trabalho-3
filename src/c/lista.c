@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "../h/lista.h"
 
@@ -25,15 +26,25 @@ Lista* inicia_lista(){
 }
 
 void insere_na_lista(Lista* lista, char* string){
+    Celula* cont = NULL;
+    for(cont = lista->prim; cont!=NULL; cont = cont->prox){
+        if(strcmp(cont->chave, string) == 0) return;
+    }
+
     Celula* nova = (Celula*)malloc(sizeof(Celula));
-
     nova->chave = string;
-    nova->prox = lista->prim;
+    nova->prox = NULL;
 
-    lista->prim = nova;
+    if(lista->ult == NULL) {
+        lista->ult = nova;
+        lista->prim = nova;
+    }
+    else {
+        lista->ult->prox = nova;
+        lista->ult = nova;
+    }
 
-    if(lista->ult == NULL) lista->ult = nova;
-    
+
 }
 
 void retira_na_lista(Lista* lista, int posicao){
